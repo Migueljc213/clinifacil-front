@@ -1,8 +1,15 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Search,
   MapPin,
@@ -20,9 +27,11 @@ import {
   TrendingUp,
   Award,
   Heart,
-} from "lucide-react"
-
+} from "lucide-react";
+import BotaoLogin from "./_components/BotaoLogin";
 export default function LandingPage() {
+
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
@@ -40,21 +49,31 @@ export default function LandingPage() {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <Link href="#clinicas" className="text-sm font-medium hover:text-teal-600">
+            <Link
+              href="#clinicas"
+              className="text-sm font-medium hover:text-teal-600"
+            >
               Clínicas
             </Link>
-            <Link href="#noticias" className="text-sm font-medium hover:text-teal-600">
+            <Link
+              href="#noticias"
+              className="text-sm font-medium hover:text-teal-600"
+            >
               Notícias
             </Link>
-            <Link href="#planos" className="text-sm font-medium hover:text-teal-600">
+            <Link
+              href="#planos"
+              className="text-sm font-medium hover:text-teal-600"
+            >
               Planos
             </Link>
-            <Link href="#sobre" className="text-sm font-medium hover:text-teal-600">
+            <Link
+              href="#sobre"
+              className="text-sm font-medium hover:text-teal-600"
+            >
               Sobre
             </Link>
-            <Button className="bg-teal-600 hover:bg-teal-700" asChild>
-              <Link href="#cadastro">Cadastre sua Clínica</Link>
-            </Button>
+            <BotaoLogin/>
           </nav>
         </div>
       </header>
@@ -70,12 +89,17 @@ export default function LandingPage() {
                     Encontre as melhores clínicas da sua região
                   </h1>
                   <p className="max-w-[600px] text-gray-600 md:text-xl">
-                    Conectamos você às melhores clínicas e profissionais de saúde perto de você. Busque, compare e
-                    agende consultas em um só lugar.
+                    Conectamos você às melhores clínicas e profissionais de
+                    saúde perto de você. Busque, compare e agende consultas em
+                    um só lugar.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button size="lg" className="bg-teal-600 hover:bg-teal-700" asChild>
+                  <Button
+                    size="lg"
+                    className="bg-teal-600 hover:bg-teal-700"
+                    asChild
+                  >
                     <Link href="#buscar">Buscar Clínicas</Link>
                   </Button>
                   <Button
@@ -122,7 +146,9 @@ export default function LandingPage() {
                     className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   />
                 </div>
-                <Button className="bg-teal-600 hover:bg-teal-700 py-3 px-6">Buscar</Button>
+                <Button className="bg-teal-600 hover:bg-teal-700 py-3 px-6">
+                  Buscar
+                </Button>
               </div>
             </div>
           </div>
@@ -133,7 +159,9 @@ export default function LandingPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-teal-800">Clínicas em Destaque</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-teal-800">
+                  Clínicas em Destaque
+                </h2>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed">
                   Conheça as clínicas mais bem avaliadas pelos usuários
                 </p>
@@ -148,7 +176,9 @@ export default function LandingPage() {
                     alt="Clínica Saúde Total"
                     className="object-cover"
                   />
-                  <Badge className="absolute top-2 right-2 bg-teal-600">Destaque</Badge>
+                  <Badge className="absolute top-2 right-2 bg-teal-600">
+                    Destaque
+                  </Badge>
                 </div>
                 <CardHeader className="pb-2">
                   <CardTitle>Clínica Saúde Total</CardTitle>
@@ -171,11 +201,14 @@ export default function LandingPage() {
                     <span>Cardiologia, Clínica Geral, Pediatria</span>
                   </div>
                   <p className="text-sm text-gray-600 mt-2">
-                    Atendimento humanizado com os melhores especialistas da região.
+                    Atendimento humanizado com os melhores especialistas da
+                    região.
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">Ver Detalhes</Button>
+                  <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                    Ver Detalhes
+                  </Button>
                 </CardFooter>
               </Card>
 
@@ -187,7 +220,9 @@ export default function LandingPage() {
                     alt="Centro Médico Bem Estar"
                     className="object-cover"
                   />
-                  <Badge className="absolute top-2 right-2 bg-teal-600">Destaque</Badge>
+                  <Badge className="absolute top-2 right-2 bg-teal-600">
+                    Destaque
+                  </Badge>
                 </div>
                 <CardHeader className="pb-2">
                   <CardTitle>Centro Médico Bem Estar</CardTitle>
@@ -209,10 +244,14 @@ export default function LandingPage() {
                     <CheckCircle className="h-4 w-4 text-teal-600" />
                     <span>Ortopedia, Fisioterapia, Nutrição</span>
                   </div>
-                  <p className="text-sm text-gray-600 mt-2">Tratamentos integrados para sua saúde física e mental.</p>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Tratamentos integrados para sua saúde física e mental.
+                  </p>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">Ver Detalhes</Button>
+                  <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                    Ver Detalhes
+                  </Button>
                 </CardFooter>
               </Card>
 
@@ -224,7 +263,9 @@ export default function LandingPage() {
                     alt="Instituto Saúde Plena"
                     className="object-cover"
                   />
-                  <Badge className="absolute top-2 right-2 bg-teal-600">Destaque</Badge>
+                  <Badge className="absolute top-2 right-2 bg-teal-600">
+                    Destaque
+                  </Badge>
                 </div>
                 <CardHeader className="pb-2">
                   <CardTitle>Instituto Saúde Plena</CardTitle>
@@ -251,12 +292,17 @@ export default function LandingPage() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">Ver Detalhes</Button>
+                  <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                    Ver Detalhes
+                  </Button>
                 </CardFooter>
               </Card>
             </div>
             <div className="flex justify-center">
-              <Button variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
+              <Button
+                variant="outline"
+                className="border-teal-600 text-teal-600 hover:bg-teal-50"
+              >
                 Ver Todas as Clínicas
               </Button>
             </div>
@@ -268,7 +314,9 @@ export default function LandingPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-teal-800">Notícias e Artigos</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-teal-800">
+                  Notícias e Artigos
+                </h2>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed">
                   Fique por dentro das últimas novidades da área da saúde
                 </p>
@@ -289,11 +337,14 @@ export default function LandingPage() {
                     <Calendar className="h-4 w-4" />
                     <span>12 de Maio, 2023</span>
                   </div>
-                  <CardTitle className="text-lg">Os benefícios da telemedicina no atendimento primário</CardTitle>
+                  <CardTitle className="text-lg">
+                    Os benefícios da telemedicina no atendimento primário
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600">
-                    Descubra como a telemedicina está revolucionando o acesso aos cuidados de saúde primários...
+                    Descubra como a telemedicina está revolucionando o acesso
+                    aos cuidados de saúde primários...
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -318,12 +369,14 @@ export default function LandingPage() {
                     <span>5 de Maio, 2023</span>
                   </div>
                   <CardTitle className="text-lg">
-                    Novas tecnologias para diagnóstico precoce de doenças cardíacas
+                    Novas tecnologias para diagnóstico precoce de doenças
+                    cardíacas
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600">
-                    Conheça as inovações tecnológicas que estão transformando o diagnóstico de doenças cardíacas...
+                    Conheça as inovações tecnológicas que estão transformando o
+                    diagnóstico de doenças cardíacas...
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -347,11 +400,14 @@ export default function LandingPage() {
                     <Calendar className="h-4 w-4" />
                     <span>28 de Abril, 2023</span>
                   </div>
-                  <CardTitle className="text-lg">A importância da saúde mental no ambiente de trabalho</CardTitle>
+                  <CardTitle className="text-lg">
+                    A importância da saúde mental no ambiente de trabalho
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-600">
-                    Entenda por que as empresas estão investindo cada vez mais em programas de saúde mental...
+                    Entenda por que as empresas estão investindo cada vez mais
+                    em programas de saúde mental...
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -362,7 +418,10 @@ export default function LandingPage() {
               </Card>
             </div>
             <div className="flex justify-center">
-              <Button variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
+              <Button
+                variant="outline"
+                className="border-teal-600 text-teal-600 hover:bg-teal-50"
+              >
                 Ver Todas as Notícias
               </Button>
             </div>
@@ -378,7 +437,8 @@ export default function LandingPage() {
                   Planos Premium para Clínicas
                 </h2>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed">
-                  Aumente sua visibilidade e atraia mais pacientes com nossos planos exclusivos
+                  Aumente sua visibilidade e atraia mais pacientes com nossos
+                  planos exclusivos
                 </p>
               </div>
             </div>
@@ -389,7 +449,9 @@ export default function LandingPage() {
                   <CardDescription>Para clínicas iniciantes</CardDescription>
                   <div className="mt-4 flex items-baseline">
                     <span className="text-3xl font-bold">R$99</span>
-                    <span className="ml-1 text-sm text-muted-foreground">/mês</span>
+                    <span className="ml-1 text-sm text-muted-foreground">
+                      /mês
+                    </span>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -413,7 +475,9 @@ export default function LandingPage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">Assinar Agora</Button>
+                  <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                    Assinar Agora
+                  </Button>
                 </CardFooter>
               </Card>
 
@@ -423,10 +487,14 @@ export default function LandingPage() {
                 </div>
                 <CardHeader>
                   <CardTitle>Profissional</CardTitle>
-                  <CardDescription>Para clínicas em crescimento</CardDescription>
+                  <CardDescription>
+                    Para clínicas em crescimento
+                  </CardDescription>
                   <div className="mt-4 flex items-baseline">
                     <span className="text-3xl font-bold">R$199</span>
-                    <span className="ml-1 text-sm text-muted-foreground">/mês</span>
+                    <span className="ml-1 text-sm text-muted-foreground">
+                      /mês
+                    </span>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -454,7 +522,9 @@ export default function LandingPage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">Assinar Agora</Button>
+                  <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                    Assinar Agora
+                  </Button>
                 </CardFooter>
               </Card>
 
@@ -464,7 +534,9 @@ export default function LandingPage() {
                   <CardDescription>Para clínicas estabelecidas</CardDescription>
                   <div className="mt-4 flex items-baseline">
                     <span className="text-3xl font-bold">R$349</span>
-                    <span className="ml-1 text-sm text-muted-foreground">/mês</span>
+                    <span className="ml-1 text-sm text-muted-foreground">
+                      /mês
+                    </span>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -496,7 +568,11 @@ export default function LandingPage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">Assinar Agora</Button>
+                  <Link href="https://buy.stripe.com/test_aEU9BW0Y88S75kQ8ww">
+                    <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                      Assinar Agora
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </div>
@@ -522,21 +598,28 @@ export default function LandingPage() {
                   <TrendingUp className="h-6 w-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-medium">Mais Visibilidade</h3>
-                <p className="text-sm text-gray-600">Aumente a visibilidade da sua clínica e atraia novos pacientes.</p>
+                <p className="text-sm text-gray-600">
+                  Aumente a visibilidade da sua clínica e atraia novos
+                  pacientes.
+                </p>
               </div>
               <div className="flex flex-col items-center text-center space-y-2">
                 <div className="rounded-full bg-teal-100 p-3">
                   <Users className="h-6 w-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-medium">Mais Pacientes</h3>
-                <p className="text-sm text-gray-600">Conecte-se com pacientes que estão buscando seus serviços.</p>
+                <p className="text-sm text-gray-600">
+                  Conecte-se com pacientes que estão buscando seus serviços.
+                </p>
               </div>
               <div className="flex flex-col items-center text-center space-y-2">
                 <div className="rounded-full bg-teal-100 p-3">
                   <Clock className="h-6 w-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-medium">Economia de Tempo</h3>
-                <p className="text-sm text-gray-600">Gerencie agendamentos e comunicações em um só lugar.</p>
+                <p className="text-sm text-gray-600">
+                  Gerencie agendamentos e comunicações em um só lugar.
+                </p>
               </div>
               <div className="flex flex-col items-center text-center space-y-2">
                 <div className="rounded-full bg-teal-100 p-3">
@@ -544,7 +627,8 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-lg font-medium">Credibilidade</h3>
                 <p className="text-sm text-gray-600">
-                  Avaliações e depoimentos que aumentam a confiança dos pacientes.
+                  Avaliações e depoimentos que aumentam a confiança dos
+                  pacientes.
                 </p>
               </div>
             </div>
@@ -560,7 +644,8 @@ export default function LandingPage() {
                   Pronto para aumentar a visibilidade da sua clínica?
                 </h2>
                 <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed">
-                  Junte-se a milhares de clínicas que já estão crescendo com o CliniFacil.
+                  Junte-se a milhares de clínicas que já estão crescendo com o
+                  CliniFacil.
                 </p>
               </div>
               <div className="mx-auto w-full max-w-lg space-y-4">
@@ -594,7 +679,9 @@ export default function LandingPage() {
                     />
                   </div>
                 </div>
-                <Button className="w-full bg-teal-600 hover:bg-teal-700 py-6 text-lg">Cadastrar Minha Clínica</Button>
+                <Button className="w-full bg-teal-600 hover:bg-teal-700 py-6 text-lg">
+                  Cadastrar Minha Clínica
+                </Button>
                 <p className="text-xs text-gray-500">
                   Ao se cadastrar, você concorda com nossos{" "}
                   <Link href="#" className="text-teal-600 hover:underline">
@@ -619,9 +706,13 @@ export default function LandingPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Heart className="h-6 w-6 text-teal-600" />
-                <span className="text-xl font-bold text-teal-600">CliniFacil</span>
+                <span className="text-xl font-bold text-teal-600">
+                  CliniFacil
+                </span>
               </div>
-              <p className="text-sm text-gray-600">Conectando pacientes às melhores clínicas da região.</p>
+              <p className="text-sm text-gray-600">
+                Conectando pacientes às melhores clínicas da região.
+              </p>
               <div className="flex gap-4">
                 <Link href="#" className="text-gray-500 hover:text-teal-600">
                   <Facebook className="h-5 w-5" />
@@ -696,7 +787,9 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-teal-600" />
-                  <span className="text-gray-600">contato@clinifacil.com.br</span>
+                  <span className="text-gray-600">
+                    contato@clinifacil.com.br
+                  </span>
                 </li>
                 <li className="flex items-center gap-2">
                   <MapPin className="h-4 w-4 text-teal-600" />
@@ -706,10 +799,13 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="mt-8 border-t pt-8 text-center text-sm text-gray-600">
-            <p>&copy; {new Date().getFullYear()} CliniFacil. Todos os direitos reservados.</p>
+            <p>
+              &copy; {new Date().getFullYear()} CliniFacil. Todos os direitos
+              reservados.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
